@@ -1,0 +1,412 @@
+Initializing Genesis UTXOs...
+Created UTXO (genesis, 0): 50.0 BTC -> Alice
+Created UTXO (genesis, 1): 30.0 BTC -> Bob
+Created UTXO (genesis, 2): 20.0 BTC -> Charlie
+Created UTXO (genesis, 3): 10.0 BTC -> David
+Created UTXO (genesis, 4): 5.0 BTC -> Eve
+------------------------------
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs (Genesis Block):
+Alice: 50.0 BTC
+Bob: 30.0 BTC
+Charlie: 20.0 BTC
+David: 10.0 BTC
+Eve: 5.0 BTC
+
+Main Menu:
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice : 5
+
+--- Test Scenarios ---
+1. Test 1: Basic Valid Transaction
+2. Test 2: Multiple Inputs
+3. Test 3: Double-Spend in Same Transaction
+4. Test 4: Mempool Double-Spend
+5. Test 5: Insufficient Funds
+6. Test 6: Negative Amount
+7. Test 7: Zero Fee Transaction
+8. Test 8: Race Attack Simulation
+9. Test 9: Complete Mining Flow
+10. Test 10: Unconfirmed Chain
+Select test scenario: 1
+Running Test 1...
+Testing Basic Valid Transaction (Alice -> Bob 10 BTC)...
+Result: True, Transaction added to MemPool
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs (Genesis Block):
+Alice: 50.0 BTC
+Alice_Test1: 50.0 BTC
+Bob: 30.0 BTC
+Charlie: 20.0 BTC
+David: 10.0 BTC
+Eve: 5.0 BTC
+
+Main Menu:
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice : 5
+
+--- Test Scenarios ---
+1. Test 1: Basic Valid Transaction
+2. Test 2: Multiple Inputs
+3. Test 3: Double-Spend in Same Transaction
+4. Test 4: Mempool Double-Spend
+5. Test 5: Insufficient Funds
+6. Test 6: Negative Amount
+7. Test 7: Zero Fee Transaction
+8. Test 8: Race Attack Simulation
+9. Test 9: Complete Mining Flow
+10. Test 10: Unconfirmed Chain
+Select test scenario: 2
+Running Test 2...
+Testing Multiple Inputs (50+20 -> 60)...
+Result: True, Transaction added to MemPool
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs (Genesis Block):
+Alice: 50.0 BTC
+Alice_Test1: 50.0 BTC
+Alice_Test2: 70.0 BTC
+Bob: 30.0 BTC
+Charlie: 20.0 BTC
+David: 10.0 BTC
+Eve: 5.0 BTC
+
+Main Menu:
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice : 5
+
+--- Test Scenarios ---
+1. Test 1: Basic Valid Transaction
+2. Test 2: Multiple Inputs
+3. Test 3: Double-Spend in Same Transaction
+4. Test 4: Mempool Double-Spend
+5. Test 5: Insufficient Funds
+6. Test 6: Negative Amount
+7. Test 7: Zero Fee Transaction
+8. Test 8: Race Attack Simulation
+9. Test 9: Complete Mining Flow
+10. Test 10: Unconfirmed Chain
+Select test scenario: 3
+Running Test 3...
+Testing Double Spend in Same Transaction...
+Result: False, Double spending in same transaction for UTXO ('test3_setup', 0)
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs (Genesis Block):
+Alice: 50.0 BTC
+Alice_Test1: 50.0 BTC
+Alice_Test2: 70.0 BTC
+Alice_Test3: 10.0 BTC
+Bob: 30.0 BTC
+Charlie: 20.0 BTC
+David: 10.0 BTC
+Eve: 5.0 BTC
+
+Main Menu:
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice : 5
+
+--- Test Scenarios ---
+1. Test 1: Basic Valid Transaction
+2. Test 2: Multiple Inputs
+3. Test 3: Double-Spend in Same Transaction
+4. Test 4: Mempool Double-Spend
+5. Test 5: Insufficient Funds
+6. Test 6: Negative Amount
+7. Test 7: Zero Fee Transaction
+8. Test 8: Race Attack Simulation
+9. Test 9: Complete Mining Flow
+10. Test 10: Unconfirmed Chain
+Select test scenario: 4
+Running Test 4...
+Testing Mempool Double Spend...
+TX1 Add: True, Transaction added to MemPool
+TX2 Add (Should Fail): False, UTXO ('test4_setup', 0) already spent in mempool
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs (Genesis Block):
+Alice: 50.0 BTC
+Alice_Test1: 50.0 BTC
+Alice_Test2: 70.0 BTC
+Alice_Test3: 10.0 BTC
+Alice_Test4: 10.0 BTC
+Bob: 30.0 BTC
+Charlie: 20.0 BTC
+David: 10.0 BTC
+Eve: 5.0 BTC
+
+Main Menu:
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice : 5
+
+--- Test Scenarios ---
+1. Test 1: Basic Valid Transaction
+2. Test 2: Multiple Inputs
+3. Test 3: Double-Spend in Same Transaction
+4. Test 4: Mempool Double-Spend
+5. Test 5: Insufficient Funds
+6. Test 6: Negative Amount
+7. Test 7: Zero Fee Transaction
+8. Test 8: Race Attack Simulation
+9. Test 9: Complete Mining Flow
+10. Test 10: Unconfirmed Chain
+Select test scenario: 5
+Running Test 5...
+Testing Insufficient Funds...
+Result: False, Output sum exceeds input sum
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs (Genesis Block):
+Alice: 50.0 BTC
+Alice_Test1: 50.0 BTC
+Alice_Test2: 70.0 BTC
+Alice_Test3: 10.0 BTC
+Alice_Test4: 10.0 BTC
+Bob: 30.0 BTC
+Bob_Test5: 30.0 BTC
+Charlie: 20.0 BTC
+David: 10.0 BTC
+Eve: 5.0 BTC
+
+Main Menu:
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice : 5
+
+--- Test Scenarios ---
+1. Test 1: Basic Valid Transaction
+2. Test 2: Multiple Inputs
+3. Test 3: Double-Spend in Same Transaction
+4. Test 4: Mempool Double-Spend
+5. Test 5: Insufficient Funds
+6. Test 6: Negative Amount
+7. Test 7: Zero Fee Transaction
+8. Test 8: Race Attack Simulation
+9. Test 9: Complete Mining Flow
+10. Test 10: Unconfirmed Chain
+Select test scenario: 6
+Running Test 6...
+Testing Negative Amount...
+Result: False, Output amount cannot be negative
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs (Genesis Block):
+Alice: 50.0 BTC
+Alice_Test1: 50.0 BTC
+Alice_Test2: 70.0 BTC
+Alice_Test3: 10.0 BTC
+Alice_Test4: 10.0 BTC
+Alice_Test6: 10.0 BTC
+Bob: 30.0 BTC
+Bob_Test5: 30.0 BTC
+Charlie: 20.0 BTC
+David: 10.0 BTC
+Eve: 5.0 BTC
+
+Main Menu:
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice : 5
+
+--- Test Scenarios ---
+1. Test 1: Basic Valid Transaction
+2. Test 2: Multiple Inputs
+3. Test 3: Double-Spend in Same Transaction
+4. Test 4: Mempool Double-Spend
+5. Test 5: Insufficient Funds
+6. Test 6: Negative Amount
+7. Test 7: Zero Fee Transaction
+8. Test 8: Race Attack Simulation
+9. Test 9: Complete Mining Flow
+10. Test 10: Unconfirmed Chain
+Select test scenario: 7
+Running Test 7...
+Testing Zero Fee...
+Result: True, Transaction added to MemPool
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs (Genesis Block):
+Alice: 50.0 BTC
+Alice_Test1: 50.0 BTC
+Alice_Test2: 70.0 BTC
+Alice_Test3: 10.0 BTC
+Alice_Test4: 10.0 BTC
+Alice_Test6: 10.0 BTC
+Alice_Test7: 10.0 BTC
+Bob: 30.0 BTC
+Bob_Test5: 30.0 BTC
+Charlie: 20.0 BTC
+David: 10.0 BTC
+Eve: 5.0 BTC
+
+Main Menu:
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice : 5
+
+--- Test Scenarios ---
+1. Test 1: Basic Valid Transaction
+2. Test 2: Multiple Inputs
+3. Test 3: Double-Spend in Same Transaction
+4. Test 4: Mempool Double-Spend
+5. Test 5: Insufficient Funds
+6. Test 6: Negative Amount
+7. Test 7: Zero Fee Transaction
+8. Test 8: Race Attack Simulation
+9. Test 9: Complete Mining Flow
+10. Test 10: Unconfirmed Chain
+Select test scenario: 8
+Running Test 8...
+Testing Race Attack (First Seen Rule)...
+Low Fee TX Arrives First: True, Transaction added to MemPool
+High Fee TX Arrives Second (Should Reject): False, UTXO ('test8_setup', 0) already spent in mempool
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs (Genesis Block):
+Alice: 50.0 BTC
+Alice_Test1: 50.0 BTC
+Alice_Test2: 70.0 BTC
+Alice_Test3: 10.0 BTC
+Alice_Test4: 10.0 BTC
+Alice_Test6: 10.0 BTC
+Alice_Test7: 10.0 BTC
+Alice_Test8: 20.0 BTC
+Bob: 30.0 BTC
+Bob_Test5: 30.0 BTC
+Charlie: 20.0 BTC
+David: 10.0 BTC
+Eve: 5.0 BTC
+
+Main Menu:
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice : 5
+
+--- Test Scenarios ---
+1. Test 1: Basic Valid Transaction
+2. Test 2: Multiple Inputs
+3. Test 3: Double-Spend in Same Transaction
+4. Test 4: Mempool Double-Spend
+5. Test 5: Insufficient Funds
+6. Test 6: Negative Amount
+7. Test 7: Zero Fee Transaction
+8. Test 8: Race Attack Simulation
+9. Test 9: Complete Mining Flow
+10. Test 10: Unconfirmed Chain
+Select test scenario: 9
+Running Test 9...
+Testing Complete Mining Flow...
+Mempool before mining: 1
+Mempool before mining: 1
+Nonce found: 265
+Block 0 added to main chain.
+Mempool after mining: 0
+Input UTXO consumed: True
+Output UTXO created: True
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs (Genesis Block):
+Alice: 50.0 BTC
+Alice_Test1: 50.0 BTC
+Alice_Test2: 70.0 BTC
+Alice_Test3: 10.0 BTC
+Alice_Test4: 10.0 BTC
+Alice_Test6: 10.0 BTC
+Alice_Test7: 10.0 BTC
+Alice_Test8: 20.0 BTC
+Bob: 30.0 BTC
+Bob_Test5: 30.0 BTC
+Bob_Test9: 9.0 BTC
+Charlie: 20.0 BTC
+David: 10.0 BTC
+Eve: 5.0 BTC
+Miner_Test9: 1.0 BTC
+
+Main Menu:
+1. Create new transaction
+2. View UTXO set
+3. View mempool
+4. Mine block
+5. Run test scenarios
+6. Exit
+Enter choice : 5
+
+--- Test Scenarios ---
+1. Test 1: Basic Valid Transaction
+2. Test 2: Multiple Inputs
+3. Test 3: Double-Spend in Same Transaction
+4. Test 4: Mempool Double-Spend
+5. Test 5: Insufficient Funds
+6. Test 6: Negative Amount
+7. Test 7: Zero Fee Transaction
+8. Test 8: Race Attack Simulation
+9. Test 9: Complete Mining Flow
+10. Test 10: Unconfirmed Chain
+Select test scenario: 10
+Running Test 10...
+Testing Unconfirmed Chain (Chained Mempool Transacions)...
+TX1 (Alice->Bob) added to mempool.
+TX2 (Bob->Charlie) Result: False, UTXO ('tx_test10_1', 0) not found in UTXO set
+Explanation: Rejected because input UTXO is not yet confirmed (mined).
+
+=== Bitcoin Transaction Simulator ===
+Initial UTXOs (Genesis Block):
+Alice: 50.0 BTC
+Alice_Test1: 50.0 BTC
+Alice_Test10: 10.0 BTC
+Alice_Test2: 70.0 BTC
+Alice_Test3: 10.0 BTC
+Alice_Test4: 10.0 BTC
+Alice_Test6: 10.0 BTC
+Alice_Test7: 10.0 BTC
+Alice_Test8: 20.0 BTC
+Bob: 30.0 BTC
+Bob_Test5: 30.0 BTC
+Bob_Test9: 9.0 BTC
+Charlie: 20.0 BTC
+David: 10.0 BTC
+Eve: 5.0 BTC
+Miner_Test9: 1.0 BTC
